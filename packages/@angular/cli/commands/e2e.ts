@@ -43,6 +43,16 @@ const E2eCommand = Command.extend({
       `
     },
     {
+      name: 'specs',
+      type: Array,
+      default: [],
+      aliases: ['sp'],
+      description: oneLine`
+        Override specs in the protractor config.
+        Can send in multiple specs by repeating flag (ng e2e --specs=spec1.ts --specs=spec2.ts).
+      `
+    },
+    {
       name: 'element-explorer',
       type: Boolean,
       default: false,
